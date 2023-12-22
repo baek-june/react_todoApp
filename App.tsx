@@ -1,14 +1,15 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
 import DateHead from './components/DateHead';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 function App() {
   const today = new Date();
 
   return (
-    <SafeAreaView>
+    <SafeAreaProvider>
       <DateHead date={today} />
-    </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
 const styles = StyleSheet.create({});
